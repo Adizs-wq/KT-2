@@ -1,6 +1,7 @@
-def main():
-    print("Hello from kt-2!")
+from fastapi import FastAPI
 
+app = FastAPI()
 
-if __name__ == "__main__":
-    main()
+@app.get("/")
+def root():
+    return {"status": "ok"}
